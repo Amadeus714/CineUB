@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compra de entradas para Capitán América: UN NUEVO MUNDO en CineStar">
+    <title>Detalles de Película - Cine - Teatro - Central</title>
+    <link rel="stylesheet" href="stylesDetalles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <a href="index.html" aria-label="Volver a la página principal">
+            <div class="logo">
+                <img src="imagenes/logo1.png" alt="CineStar Logo" width="120" height="70">
+            </div>
+        </a>
+        <a class="iniciarSecion" href="login.html" aria-label="Volver a la página principal">
+            <div class="header-right">
+                <button id="loginBtn" aria-label="Iniciar sesión">Iniciar Sesión</button>
+            </div>
+        </a>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="movie-details-container">
+        <h1>Capitán América: UN NUEVO MUNDO</h1>
+        
+        <div class="movie-main-info">
+            <!-- Imagen y detalles básicos -->
+            <div class="movie-poster-container">
+                <img src="imagenes/img1.jpeg" alt="Póster de Capitán América: UN NUEVO MUNDO" class="movie-poster" width="350" height="525">
+                <div class="quick-info">
+                    <p><strong>Duración:</strong> 2h 15m</p>
+                    <p><strong>Género:</strong> Acción, Aventura, Superhéroes</p>
+                    <p><strong>Clasificación:</strong> PG-13 (Mayores de 13 años)</p>
+                </div>
+            </div>
+            
+            <!-- Detalles extendidos -->
+            <div class="movie-extended-info">
+
+                <!-- Trailer de la película -->
+                <div class="trailer-container">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/i0zaDSsk08w?autoplay=0&mute=0&controls=1" 
+                        title="Tráiler de Capitán América: Un Nuevo Mundo" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <!-- Calificación -->
+                <div class="rating-section" aria-label="Calificación de la película">
+                    <div class="stars" id="stars" role="group" aria-label="Valoración con estrellas">
+                        <span role="radio" aria-checked="false" tabindex="0">☆</span>
+                        <span role="radio" aria-checked="false" tabindex="0">☆</span>
+                        <span role="radio" aria-checked="false" tabindex="0">☆</span>
+                        <span role="radio" aria-checked="false" tabindex="0">☆</span>
+                        <span role="radio" aria-checked="false" tabindex="0">☆</span>
+                    </div>
+                    <p class="average-rating"><strong>Calificación:</strong> <span id="averageRating">4.2</span>/5</p>
+                </div>
+                
+                <!-- Sinopsis -->
+                <section class="synopsis" aria-labelledby="synopsis-heading">
+                    <h3 id="synopsis-heading">Sinopsis</h3>
+                    <p>Tras reunirse con el recién elegido presidente de Estados Unidos Thaddeus Ross (Harrison Ford), Sam se encuentra en medio de un incidente internacional. Debe descubrir la razón detrás de un nefasto complot global antes de que la verdadera mente maestra tenga al mundo entero viendo rojo. Cuarta película de la franquicia del Capitán América.</p>
+                </section>
+                
+                <!-- Selección de formato y horario -->
+                <div class="selection-section">
+
+                    <div class="language-selection" aria-labelledby="language-heading">
+                        <h3 id="language-heading">Idioma</h3>
+                        <div class="language-options" role="group">
+                            <button id="btn-subbed" class="language-btn selected" aria-pressed="true">
+                                Subtitulada (Original)
+                            </button>
+                            <button id="btn-dubbed" class="language-btn" aria-pressed="false">
+                                Doblada (Español)
+                            </button>
+                        </div>
+                    </div>
+                    
+
+                    <div class="day-selection" aria-labelledby="day-heading">
+                        <h3 id="day-heading">Días</h3>
+                        <div class="day-options" id="dayOptions" role="group">
+                            <!-- Los días se generarán aquí con JavaScript -->
+                            
+                        </div>
+                    </div>
+
+                    <div class="format-selection" aria-labelledby="format-heading">
+                        <h3 id="format-heading">Formato</h3>
+                        <div class="format-options" role="group">
+                            <button id="btn-2d" class="format-btn selected" aria-pressed="true">2D</button>
+                            <button id="btn-3d" class="format-btn" aria-pressed="false">3D</button>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-selection" aria-labelledby="schedule-heading">
+                        <h3 id="schedule-heading">Horarios</h3>
+                        <div class="schedule-options" role="group">
+                            <button id="time-1000" class="schedule-btn" aria-label="Horario 10:00 AM">10:00 AM</button>
+                            <button id="time-1300" class="schedule-btn" aria-label="Horario 1:00 PM">1:00 PM</button>
+                            <button id="time-1600" class="schedule-btn selected" aria-label="Horario 4:00 PM" aria-pressed="true">4:00 PM</button>
+                            <button id="time-1900" class="schedule-btn" aria-label="Horario 7:00 PM">7:00 PM</button>
+                            <button id="time-2200" class="schedule-btn" aria-label="Horario 10:00 PM">10:00 PM</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botón de compra -->
+                <button id="buyBtn" class="primary-btn" aria-label="Comprar entradas para Capitán América">Comprar Entradas</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de selección de butacas -->
+    <div id="seatModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Selecciona tus butacas</h2>
+            <p class="screen-indicator">Pantalla</p>
+            <div class="screen-display"></div>
+            
+            <div class="cinema-seat-map">
+                <!-- 
+                Se generarán 3 secciones:
+                - Izquierda: A-E
+                - Centro: F-O 
+                - Derecha: P-T
+                -->
+            </div>
+            
+            <div class="seat-selection-summary">
+                <div class="selected-seats-container">
+                    <h3>Butacas seleccionadas:</h3>
+                    <div id="selectedSeats"></div>
+                </div>
+                <div class="total-price">
+                    <h3>Total:</h3>
+                    <p id="totalAmount">$0.00</p>
+                </div>
+            </div>
+            
+            <button id="confirmPurchase" class="primary-btn">Confirmar Compra</button>
+        </div>
+    </div>
+
+    <script src="scriptsDetalles.js"></script>
+</body>
+</html>

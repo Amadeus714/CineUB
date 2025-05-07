@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine-Teatro-Central</title>
+    <link rel="stylesheet" href="stylesIndex.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <a href="index.html" aria-label="Volver a la página principal">
+            <div class="logo">
+                <img src="imagenes/logo1.png" alt="CineStar Logo" width="120" height="70">
+            </div>
+        </a>
+        <a class="iniciarSecion" href="login.html" aria-label="Volver a la página principal">
+            <div class="header-right">
+                <button id="loginBtn" aria-label="Iniciar sesión">Iniciar Sesión</button>
+            </div>
+        </a>
+    </header>
+
+    <!-- Botón flotante de Instagram -->
+    <a href="" target="_blank" class="instagram-float" aria-label="Síguenos en Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+            <path fill="white" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+    </a>
+
+    <!-- Botón flotante del chatbot -->
+    <div class="chatbot-float" id="chatbotButton" aria-label="Abrir chatbot de asistencia">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50" aria-hidden="true">
+            <!-- Cabeza del robot -->
+            <rect x="20" y="30" width="60" height="40" rx="10" fill="white" stroke="#800020" stroke-width="2"/>
+            
+            <!-- Ojos -->
+            <circle cx="35" cy="50" r="5" fill="#800020"/>
+            <circle cx="65" cy="50" r="5" fill="#800020"/>
+            
+            <!-- Boca (línea curva sonriente) -->
+            <path d="M40 60 Q50 70 60 60" stroke="#800020" stroke-width="3" fill="none" stroke-linecap="round"/>
+            
+            <!-- Antena -->
+            <line x1="50" y1="20" x2="50" y2="30" stroke="#800020" stroke-width="4"/>
+            <circle cx="50" cy="17" r="5" fill="#800020"/>
+          </svg>
+          
+          
+          
+    </div>
+
+
+    <!-- Contenedor del chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <h3>Asistencia Cine Belgrano</h3>
+            <button class="close-chatbot" id="closeChatbot">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <!-- Mensajes aparecerán aquí -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Escribe tu pregunta..." aria-label="Escribe tu pregunta para el chatbot">
+            <button id="sendMessage">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Carrusel principal reducido -->
+    <h2 class="promo-title">Próximos Estrenos</h2>
+    <div class="main-carousel-container">
+        <div class="main-carousel" id="mainCarousel">
+            
+            <img src="imagenes/img01.jpg" alt="Película 1">
+            <img src="imagenes/img02.jpg" alt="Película 2">
+            <img src="imagenes/img03.jpg" alt="Película 3">
+            
+           
+        </div>
+    </div>
+
+    <!-- Sección principal -->
+    <main>
+        <!-- Contenedor combinado de promociones y cartelera -->
+        <div class="promo-and-movies">
+            <!-- Carrusel promocional vertical con título -->
+            <div>
+                <h2 class="promo-title">Promociones</h2>
+                <div class="promo-carousel-container">
+                    <div class="promo-carousel" id="promoCarousel">
+                        
+                        <img src="imagenes/promo.png" alt="Promoción 1">
+                        <img src="imagenes/promo.png" alt="Promoción 1">
+                        <img src="imagenes/promo.png" alt="Promoción 1">
+                        <img src="imagenes/promo.png" alt="Promoción 1">
+                        <img src="imagenes/promo.png" alt="Promoción 1">
+                        <img src="imagenes/promo.png" alt="Promoción 1">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Películas en cartelera -->
+            <section class="movies-grid">
+                <h2 class="section-title">Películas en Cartelera</h2>
+                <div class="filter-container">
+                    <button class="filter-btn" id="filterBtn">Filtrar por género ▼</button>
+                    <div class="filter-dropdown" id="filterDropdown">
+                        <button class="filter-option" data-genre="all">Todos</button>
+                        <button class="filter-option" data-genre="accion">Acción</button>
+                        <button class="filter-option" data-genre="animacion">Animación</button>
+                        <button class="filter-option" data-genre="aventura">Aventura</button>
+                        <button class="filter-option" data-genre="ciencia-ficcion">Ciencia Ficción</button>
+                        <button class="filter-option" data-genre="comedia">Comedia</button>
+                        <button class="filter-option" data-genre="drama">Drama</button>
+                        <button class="filter-option" data-genre="fantasia">Fantasía</button>
+                        <button class="filter-option" data-genre="suspenso">Suspenso</button>
+                        <button class="filter-option" data-genre="policial">Policial</button>
+                        <button class="filter-option" data-genre="superheroes">Superhéroes</button>
+                    </div>
+                </div>
+                <div class="movies-container">
+                    <!-- Película 1 -->
+                    <div class="movie-card" onclick="location.href='detalles.html'" data-genre="accion,aventura,superheroes">
+                        <img src="imagenes/img1.jpeg" alt="Capitán América">
+                        <div class="movie-info">
+                            <h3>Capitán América: Un nuevo mundo</h3>
+                            <p>2D/3D • 2h 15m</p>
+                            <div class="movie-genres">
+                                <span class="genre-tag" data-genre="accion">Acción</span>
+                                <span class="genre-tag" data-genre="aventura">Aventura</span>
+                                <span class="genre-tag" data-genre="superheroes">Superhéroes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Película 2 -->
+                    <div class="movie-card" onclick="location.href='detalles.html'" data-genre="ciencia-ficcion,accion,drama">
+                        <img src="imagenes/img2.jpeg" alt="Duna">
+                        <div class="movie-info">
+                            <h3>StarWars: La venganza de los sith</h3>
+                            <p>2D/3D • 2h 46m</p>
+                            <div class="movie-genres">
+                                <span class="genre-tag" data-genre="ciencia-ficcion">Ciencia Ficción</span>
+                                <span class="genre-tag" data-genre="accion">Acción</span>
+                                <span class="genre-tag" data-genre="drama">Drama</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Película 3 -->
+                    <div class="movie-card" onclick="location.href='detalles.html'" data-genre="accion,superheroes,comedia">
+                        <img src="imagenes/img3.jpeg" alt="Kung Fu Panda">
+                        <div class="movie-info">
+                            <h3>Thunderbolts*</h3>
+                            <p>2D/3D • 2h 5m</p>
+                            <div class="movie-genres">
+                                <span class="genre-tag" data-genre="accion">Acción</span>
+                                <span class="genre-tag" data-genre="superheroes">Superhéroes</span>
+                                <span class="genre-tag" data-genre="comedia">Comedia</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Película 4 -->
+                    <div class="movie-card" onclick="location.href='detalles.html'" data-genre="ciencia-ficcion,animacion,aventura">
+                        <img src="imagenes/img4.jpeg" alt="Godzilla y Kong">
+                        <div class="movie-info">
+                            <h3>Robot Salvaje</h3>
+                            <p>2D/3D • 1h 55m</p>
+                            <div class="movie-genres">
+                                <span class="genre-tag" data-genre="animacion">Animación</span>
+                                <span class="genre-tag" data-genre="ciencia-ficcion">Ciencia Ficción</span>
+                                <span class="genre-tag" data-genre="aventura">Aventura</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Película 5 -->
+                    <div class="movie-card" onclick="location.href='detalles.html'" data-genre="suspenso,aventura,drama">
+                        <img src="imagenes/img5.jpeg" alt="Avatar">
+                        <div class="movie-info">
+                            <h3>Pecadores</h3>
+                            <p>2D/3D • 2h 10m</p>
+                            <div class="movie-genres">
+                                <span class="genre-tag" data-genre="drama">Drama</span>
+                                <span class="genre-tag" data-genre="aventura">Aventura</span>
+                                <span class="genre-tag" data-genre="suspenso">Suspenso</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Película 6 -->
+                    <div class="movie-card" onclick="location.href='detalles.html'" data-genre="aventura,Ficción,animacion">
+                        <img src="imagenes/img6.jpeg" alt="The Batman">
+                        <div class="movie-info">
+                            <h3>Flow</h3>
+                            <p>2D • 1h 25m</p>
+                            <div class="movie-genres">
+                                <span class="genre-tag" data-genre="aventura">Aventura</span>
+                                <span class="genre-tag" data-genre="Ficción">Ficción</span>
+                                <span class="genre-tag" data-genre="animacion">Animación</span>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="scriptsIndex.js"></script>
+    <script src="scriptsChatbot.js"></script>
+</body>
+</html>

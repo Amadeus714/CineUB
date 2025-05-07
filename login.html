@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - CineStar</title>
+    <link rel="stylesheet" href="stylesLogin.css">
+</head>
+<body>
+    <!-- Encabezado consistente con el resto del sitio -->
+    <header>
+        <a href="index.html" aria-label="Volver a la página principal">
+            <div class="logo">
+                <img src="imagenes/logo1.png" alt="CineStar Logo" width="120" height="70">
+            </div>
+        </a>
+        <div class="header-right">
+            <button id="registerBtn" class="secondary-btn" onclick="location.href='registro.html'">Registrarse</button>
+        </div>
+    </header>
+
+    <!-- Contenedor principal del login -->
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Iniciar Sesión</h1>
+                <p>Accede a tu cuenta para reservar entradas y disfrutar de beneficios exclusivos</p>
+            </div>
+            
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+                    <span class="input-icon">✉️</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••">
+                    <span class="input-icon">🔒</span>
+                    <button type="button" id="togglePassword" class="toggle-password" aria-label="Mostrar contraseña">👁️</button>
+                </div>
+                
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Recordar sesión</label>
+                    </div>
+                    <a href="#" id="forgotPassword" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <div class="terms-group">
+                    <input type="checkbox" id="acceptEmails" name="acceptEmails" checked>
+                    <label for="acceptEmails">Acepto recibir promociones por email</label>
+                </div>
+                
+                <button type="submit" class="auth-btn">Ingresar</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>¿No tienes una cuenta? <a href="registro.html">Regístrate ahora</a></p>
+                <p class="benefits-text">¡Regístrate para obtener descuentos exclusivos y acumular puntos!</p>
+            </div>
+        </div>
+        
+        <!-- Modal para contraseña olvidada -->
+        <div id="passwordModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Recuperar Contraseña</h2>
+                <p>Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+                <form id="recoveryForm">
+                    <div class="form-group">
+                        <input type="email" id="recoveryEmail" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+                    <button type="submit" class="auth-btn">Enviar Enlace</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="scriptsLogin.js"></script>
+</body>
+</html>
