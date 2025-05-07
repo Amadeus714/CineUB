@@ -9,27 +9,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // Preguntas frecuentes y respuestas
     const faqs = [
         {
-            question: "¿Cómo compro entradas?",
+            question: "compra entradas",
             answer: "Puedes comprar entradas seleccionando una película en cartelera, eligiendo día, horario y butacas, luego completando el pago."
         },
         {
-            question: "¿Qué métodos de pago aceptan?",
-            answer: "Aceptamos tarjetas de crédito/débito (Visa, MasterCard, American Express) y PayPal."
+            question: "metodos de pago",
+            answer: "Aceptamos tarjetas de crédito/débito (Visa, MasterCard, American Express), Mercado Pago , PayPal , etc."
         },
         {
-            question: "¿Puedo cancelar mi reserva?",
+            question: "cancelar reserva",
             answer: "Las entradas pueden cancelarse hasta 2 horas antes de la función. Contacta con nuestro servicio al cliente."
         },
         {
-            question: "¿Tienen descuentos para estudiantes?",
-            answer: "Sí, ofrecemos descuentos para estudiantes con carnet válido los días martes y jueves."
+            question: "descuentos",
+            answer: "Ofrecemos descuentos los dias Lunes , Martes , Miercoles, 2x1 en Entradas."
         }
     ];
     
     // Abrir/cerrar chatbot
     chatbotButton.addEventListener("click", function() {
         chatbotContainer.style.display = "flex";
-        addBotMessage("¡Hola! Soy el asistente virtual de CineStar. ¿En qué puedo ayudarte?");
+        addBotMessage("¡Hola! Soy el asistente virtual de Cine Belgrano. ¿En qué puedo ayudarte?");
     });
     
     closeChatbot.addEventListener("click", function() {
